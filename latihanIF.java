@@ -11,20 +11,20 @@ public class latihanIF {
         String nama="", alamat="", nohp="";
         String jawab="";
 
-        System.out.print("Join Member? (Y/N)");
+        System.out.println("Join Member? (Y/N)");
         jawab = scanner.nextLine();
 
         //cek jawaban
         if (jawab.equalsIgnoreCase("Y")) {
-            System.out.println("Nama Anda: ");
+            System.out.print("Nama Anda: ");
             nama = scanner.nextLine();
-            System.out.println("Alamat Anda: ");
+            System.out.print("Alamat Anda: ");
             alamat = scanner.nextLine();
             System.out.println("Nomor HP: ");
             nohp = scanner.nextLine();
 
             //konfirm
-            System.out.println("Ingin Lanjut Berbelanja? (Y/T");
+            System.out.println("Ingin Lanjut Berbelanja? (Y/T)");
             jawab = scanner.nextLine();
             if (jawab.equalsIgnoreCase("Y")) {
                 System.out.print("Nama Barang: ");
@@ -43,14 +43,14 @@ public class latihanIF {
                 if (total > 100000.0) {
                     System.out.println();
                     System.out.println("Selamat anda mendapat diskon 5% dengan tambahan diskon member 2%");
-                    diskon = total*0.05*0.02;
+                    diskon = total*0.07;
 
                 } else if (total > 300000.0) {
                     System.out.println("Selamat anda mendapat diskon 10% dengan tambahan diskon member 2%");
-                    diskon = total*0.1*0.02;
+                    diskon = total*0.12;
                 }
                 
-                grandtotal=total;
+                grandtotal=total-diskon;
                 System.out.println("Total yang harus dibayar:"+grandtotal);
             }
 
@@ -78,12 +78,12 @@ public class latihanIF {
 
                 } else if (total > 300000.0) {
                     System.out.println("Selamat anda mendapat diskon 10%");
-                    diskon = total*0.1;
+                    diskon = total*0.10;
                 }
                 
                 //grand total
                 System.out.println();
-                grandtotal=diskon;
+                grandtotal=total-diskon;
                 System.out.println("Total yang harus dibayar:"+grandtotal);
         }
 
